@@ -1,0 +1,12 @@
+SANTIAGO · 2 AÑITOS · KUNG FU PANDA
+
+1. Descomprime el ZIP.
+2. Abre index.html con doble clic o usando Live Server en VS Code.
+3. No hay videos ni enlaces externos para las fotografías.
+4. Las fotos se guardan en imagenes/ y están a su resolución original (la mayoría son menores a 4K). No se han ampliado artificialmente.
+5. La música es una melodía instrumental generada en el navegador al pulsar «Comenzar la aventura»; no requiere archivos MP3.
+6. La tipografía de Google Fonts es opcional y necesita internet; hay tipografías de respaldo.
+7. En script.js cambia CONFIG.whatsapp si es necesario.
+8. Cuando tengas la dirección del evento, reemplaza «Dirección por confirmar» en index.html.
+9. La confirmación abre WhatsApp y no almacena respuestas en un servidor.
+10. Si publicas la web, verifica que tienes los permisos necesarios para utilizar las imágenes.

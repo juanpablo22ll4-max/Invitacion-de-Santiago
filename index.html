@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0756a5">
+
+    <meta
+        name="description"
+        content="Una misión especial nos espera. Acompáñanos a celebrar los 2 añitos de Santiago José."
+    >
+
+    <title>Santiago | Nivel 2 Desbloqueado</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ICONOS SVG
+    ========================================== -->
+
+    <svg
+        class="svg-library"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+    >
+        <symbol id="paw-icon" viewBox="0 0 100 100">
+            <ellipse cx="22" cy="30" rx="11" ry="16"/>
+            <ellipse cx="43" cy="17" rx="11" ry="16"/>
+            <ellipse cx="66" cy="19" rx="11" ry="16"/>
+            <ellipse cx="83" cy="37" rx="10" ry="15"/>
+
+            <path
+                d="M50 42
+                   C35 42 20 60 20 73
+                   C20 88 35 91 50 84
+                   C65 91 80 88 80 73
+                   C80 60 65 42 50 42Z"
+            />
+        </symbol>
+
+        <symbol id="star-icon" viewBox="0 0 100 100">
+            <path
+                d="M50 5
+                   L63 35
+                   L96 38
+                   L71 60
+                   L79 94
+                   L50 76
+                   L21 94
+                   L29 60
+                   L4 38
+                   L37 35Z"
+            />
+        </symbol>
+    </svg>
+
+
+    <!-- ==========================================
+         PANTALLA DE BIENVENIDA
+    ========================================== -->
+
+    <div id="welcomeScreen" class="welcome-screen">
+
+        <div class="welcome-glow"></div>
+
+        <div class="welcome-content">
+
+            <div class="welcome-shield">
+                <img
+                    src="Cachorros Paw Patrol en Pila Colorida.png"
+                    alt="Cachorros de Paw Patrol"
+                    class="welcome-puppies"
+                >
+            </div>
+
+            <p class="welcome-mini">
+                ATENCIÓN, EQUIPO
+            </p>
+
+            <h1>
+                ¡TENEMOS UNA
+                <span>MISIÓN ESPECIAL!</span>
+            </h1>
+
+            <p class="welcome-description">
+                Nuestro pequeño héroe está listo
+                para desbloquear una nueva aventura.
+            </p>
+
+            <div class="welcome-level-image">
+                <img
+                    src="Emblema de Escudo Azul con Número 2.png"
+                    alt="Santiago cumple 2 años"
+                    class="level-image"
+                >
+            </div>
+
+            <button
+                id="openButton"
+                class="btn btn-yellow"
+                type="button"
+            >
+                DESBLOQUEAR INVITACIÓN
+            </button>
+
+            <p class="welcome-hint">
+                Presiona para comenzar la aventura
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
+
+    <main id="invitation">
+
+
+        <!-- ======================================
+             PORTADA
+        ====================================== -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-sky"></div>
+            <div class="hero-light"></div>
+
+            <div
+                id="particles"
+                class="particles"
+                aria-hidden="true"
+            ></div>
+
+            <!-- GLOBOS -->
+
+            <div
+                class="balloon balloon-blue balloon-1"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="balloon balloon-red balloon-2"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="balloon balloon-yellow balloon-3"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="balloon balloon-blue balloon-4"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="balloon balloon-red balloon-5"
+                aria-hidden="true"
+            ></div>
+
+            <!-- HUELLITAS DECORATIVAS -->
+
+            <svg
+                class="floating-paw paw-1"
+                aria-hidden="true"
+            >
+                <use href="#paw-icon"></use>
+            </svg>
+
+            <svg
+                class="floating-paw paw-2"
+                aria-hidden="true"
+            >
+                <use href="#paw-icon"></use>
+            </svg>
+
+            <svg
+                class="floating-paw paw-3"
+                aria-hidden="true"
+            >
+                <use href="#paw-icon"></use>
+            </svg>
+
+
+            <div class="hero-container">
+
+                <!-- FOTOGRAFÍA -->
+
+                <div class="hero-visual" data-parallax>
+
+                    <div class="hero-ring ring-one"></div>
+                    <div class="hero-ring ring-two"></div>
+
+                    <div class="hero-photo">
+                        <img
+                            src="Santiago y sus amigos PAW Patrol.png"
+                            alt="Santiago José en su aventura de Paw Patrol"
+                            id="santiagoPhoto"
+                        >
+                    </div>
+
+                    <div class="hero-number">
+                        <span>LEVEL</span>
+                        <strong>2</strong>
+                    </div>
+
+                    <div class="hero-star star-one"></div>
+                    <div class="hero-star star-two"></div>
+
+                </div>
+
+
+                <!-- TEXTO PRINCIPAL -->
+
+                <div class="hero-text">
+
+                    <div class="hero-label">
+                        <svg class="paw-icon">
+                            <use href="#paw-icon"></use>
+                        </svg>
+
+                        UNA NUEVA AVENTURA
+                    </div>
+
+                    <h2 class="hero-title">
+                        ¡NIVEL 2
+                        <span>DESBLOQUEADO!</span>
+                    </h2>
+
+                    <p class="hero-small">
+                        NUESTRO PEQUEÑO HÉROE
+                    </p>
+
+                    <h1 class="hero-name">
+                        SANTIAGO
+                        <span></span>
+                    </h1>
+
+                    <div class="hero-age">
+                        ¡CUMPLE 2 AÑITOS!
+                    </div>
+
+                    <p class="hero-description">
+                        Nuestro pequeño está listo
+                        para una nueva aventura.
+
+                        Queremos invitarte a celebrar
+                        sus 2 añitos con una tarde
+                        llena de juegos, risas y
+                        momentos inolvidables.
+                    </p>
+
+                    <a
+                        href="#event"
+                        class="btn btn-yellow hero-button"
+                    >
+                        DESCUBRIR LA MISIÓN
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- INDICADOR DE DESPLAZAMIENTO -->
+
+            <a
+                href="#event"
+                class="scroll-indicator"
+                aria-label="Deslizar para descubrir la celebración"
+            >
+                <span>DESLIZA PARA CONTINUAR</span>
+
+                <div class="scroll-mouse">
+                    <div></div>
+                </div>
+            </a>
+
+            <div class="hero-wave"></div>
+
+        </section>
+
+
+        <!-- ======================================
+             INFORMACIÓN DEL EVENTO
+        ====================================== -->
+
+        <section
+            id="event"
+            class="event-section section-padding"
+        >
+
+            <div class="section-heading reveal">
+
+                <span class="section-eyebrow">
+                    MISIÓN ESPECIAL
+                </span>
+
+                <h2>¡La gran celebración!</h2>
+
+                <p>
+                    Prepárate para una tarde
+                    llena de diversión.
+                </p>
+
+            </div>
+
+
+            <div class="event-card reveal">
+
+                <div class="event-card-header">
+
+                    <div class="event-paw">
+                        <svg>
+                            <use href="#paw-icon"></use>
+                        </svg>
+                    </div>
+
+                    <p>DESTINO DE LA MISIÓN</p>
+
+                    <h3>Chuck E. Cheese</h3>
+
+                    <span>
+                        ¡Una aventura llena de juegos nos espera!
+                    </span>
+
+                </div>
+
+
+                <div class="event-details">
+
+                    <div class="event-detail">
+                        <span class="event-detail-label">
+                            FECHA
+                        </span>
+
+                        <strong id="eventDate">
+                            14 de noviembre de 2026
+                        </strong>
+                    </div>
+
+                    <div class="event-detail">
+                        <span class="event-detail-label">
+                            HORARIO
+                        </span>
+
+                        <strong>
+                            3:00 P. M.
+                            <br>
+                            A
+                            <br>
+                            5:00 P. M.
+                        </strong>
+                    </div>
+
+                    <div class="event-detail">
+                        <span class="event-detail-label">
+                            LUGAR
+                        </span>
+
+                        <strong>Chuck E. Cheese</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- CUENTA REGRESIVA -->
+
+                <div
+                    id="countdownSection"
+                    class="countdown-box"
+                    hidden
+                >
+
+                    <p>LA MISIÓN COMIENZA EN</p>
+
+                    <div class="countdown-grid">
+
+                        <div>
+                            <strong id="days">00</strong>
+                            <span>DÍAS</span>
+                        </div>
+
+                        <div>
+                            <strong id="hours">00</strong>
+                            <span>HORAS</span>
+                        </div>
+
+                        <div>
+                            <strong id="minutes">00</strong>
+                            <span>MINUTOS</span>
+                        </div>
+
+                        <div>
+                            <strong id="seconds">00</strong>
+                            <span>SEGUNDOS</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- UBICACIÓN -->
+
+                <p
+                    id="locationMessage"
+                    class="location-message"
+                >
+                    Consulta la ubicación exacta
+                    de nuestra celebración.
+                </p>
+
+                <a
+                    id="mapsButton"
+                    href="#"
+                    class="btn btn-blue"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    hidden
+                >
+                    VER UBICACIÓN
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             TRANSICIÓN DE AVENTURA
+        ====================================== -->
+
+        <section class="mission-banner">
+
+            <div class="mission-banner-content reveal">
+
+                <svg class="mission-paw">
+                    <use href="#paw-icon"></use>
+                </svg>
+
+                <span>PREPARA TU EQUIPO</span>
+
+                <h2>
+                    ¡NUESTRA AVENTURA
+                    COMIENZA!
+                </h2>
+
+                <p>
+                    Cuatro niveles.
+                    Una misión muy especial.
+                    ¡Celebrar a Santiago!
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             CUATRO NIVELES DE DIVERSIÓN
+        ====================================== -->
+
+        <section
+            id="levels"
+            class="levels-section section-padding"
+        >
+
+            <div class="section-heading reveal">
+
+                <span class="section-eyebrow">
+                    EL PLAN DE LA MISIÓN
+                </span>
+
+                <h2>Cuatro niveles de diversión</h2>
+
+                <p>
+                    Cada momento será parte
+                    de una aventura inolvidable.
+                </p>
+
+            </div>
+
+
+            <div class="levels-container">
+
+
+                <!-- NIVEL 1 -->
+
+                <article class="level-card level-blue reveal">
+
+                    <div class="level-icon">
+                        <img
+                            src="Huella Azul con “01” Blanco.png"
+                            alt="Huella nivel 1"
+                            class="level-paw-image"
+                        >
+                    </div>
+
+                    <div class="level-content">
+
+                        <span class="level-time">
+                            NIVEL 1 | 3:00 P. M.
+                        </span>
+
+                        <h3>¡Comienza la diversión!</h3>
+
+                        <p>
+                            Recibiremos a nuestros
+                            invitados y comenzaremos
+                            una tarde llena de juegos
+                            y alegría.
+                        </p>
+
+                        <span class="level-status">
+                            MISIÓN: JUGAR Y DIVERTIRSE
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NIVEL 2 -->
+
+                <article class="level-card level-yellow reveal">
+
+                    <div class="level-icon">
+                        <img
+                            src="Huella Amarilla con “02”.png"
+                            alt="Huella nivel 2"
+                            class="level-paw-image"
+                        >
+                    </div>
+
+                    <div class="level-content">
+
+                        <span class="level-time">
+                            NIVEL 2 | 4:00 P. M.
+                        </span>
+
+                        <h3>¡Hora de la merienda!</h3>
+
+                        <p>
+                            Haremos una pequeña pausa
+                            para compartir algo
+                            delicioso y recargar
+                            energías.
+                        </p>
+
+                        <span class="level-status">
+                            MISIÓN: RECARGAR ENERGÍAS
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NIVEL 3 -->
+
+                <article class="level-card level-red reveal">
+
+                    <div class="level-icon">
+                        <img
+                            src="Huella roja con número 03.png"
+                            alt="Huella nivel 3"
+                            class="level-paw-image"
+                        >
+                    </div>
+
+                    <div class="level-content">
+
+                        <span class="level-time">
+                            NIVEL 3 | 4:30 P. M.
+                        </span>
+
+                        <h3>¡A cantar cumpleaños!</h3>
+
+                        <p>
+                            Llegó el momento más
+                            especial: cantaremos
+                            cumpleaños feliz a
+                            Santiago y compartiremos
+                            su torta.
+                        </p>
+
+                        <span class="level-status">
+                            MISIÓN: CELEBRAR A SANTIAGO
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NIVEL 4 -->
+
+                <article class="level-card level-green reveal">
+
+                    <div class="level-icon">
+                        <img
+                            src="Huella verde con número 04.png"
+                            alt="Huella nivel 4"
+                            class="level-paw-image"
+                        >
+                    </div>
+
+                    <div class="level-content">
+
+                        <span class="level-time">
+                            NIVEL 4 | 5:00 P. M.
+                        </span>
+
+                        <h3>¡Misión cumplida!</h3>
+
+                        <p>
+                            Terminamos nuestra
+                            aventura agradeciéndote
+                            por acompañarnos en
+                            este día tan especial.
+                        </p>
+
+                        <span class="level-status">
+                            MISIÓN COMPLETADA
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             RECORDATORIO
+        ====================================== -->
+
+        <section class="reminder-section section-padding">
+
+            <div class="reminder-card reveal">
+
+                <div class="reminder-icon">
+                    <svg>
+                        <use href="#paw-icon"></use>
+                    </svg>
+                </div>
+
+                <span class="section-eyebrow">
+                    INFORMACIÓN IMPORTANTE
+                </span>
+
+                <h2>Un pequeño recordatorio</h2>
+
+                <p>
+                    Nuestra celebración tendrá una duración
+                    de <strong>2 horas</strong>, por lo que
+                    agradecemos mucho tu puntualidad
+                    para que los pequeños puedan
+                    disfrutar de cada momento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             CONFIRMACIÓN DE ASISTENCIA
+        ====================================== -->
+
+        <section
+            id="rsvp"
+            class="rsvp-section section-padding"
+        >
+
+            <div class="rsvp-card reveal">
+
+                <div class="rsvp-icon">
+                    <svg>
+                        <use href="#paw-icon"></use>
+                    </svg>
+                </div>
+
+                <span class="section-eyebrow">
+                    ÚNETE A NUESTRA MISIÓN
+                </span>
+
+                <h2>Confirma tu asistencia</h2>
+
+                <p class="rsvp-description">
+                    Tu confirmación es muy importante.
+                    Por favor, confirma tu asistencia
+                    con anticipación para ayudarnos
+                    a organizar esta celebración.
+                </p>
+
+
+                <form id="rsvpForm">
+
+                    <!-- NOMBRE DEL INVITADO -->
+
+                    <div class="form-group">
+
+                        <label for="guestName">
+                            Nombre del invitado
+                        </label>
+
+                        <input
+                            type="text"
+                            id="guestName"
+                            name="guestName"
+                            placeholder="Escribe tu nombre"
+                            maxlength="80"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- ASISTENCIA -->
+
+                    <div class="form-group">
+
+                        <label for="attendance">
+                            ¿Nos acompañarás?
+                        </label>
+
+                        <select
+                            id="attendance"
+                            name="attendance"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="yes">
+                                Sí, asistiré
+                            </option>
+
+                            <option value="no">
+                                No podré asistir
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- BOTÓN DE CONFIRMACIÓN -->
+
+                    <button
+                        type="submit"
+                        id="confirmButton"
+                        class="btn btn-yellow confirm-button"
+                    >
+                        CONFIRMAR ASISTENCIA
+                    </button>
+
+
+                    <!-- MENSAJE DE ESTADO -->
+
+                    <p
+                        id="rsvpMessage"
+                        class="rsvp-message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             DESPEDIDA
+        ====================================== -->
+
+        <footer class="footer">
+
+            <div class="footer-content reveal">
+
+                <svg class="footer-paw">
+                    <use href="#paw-icon"></use>
+                </svg>
+
+                <p>UNA AVENTURA MUY ESPECIAL</p>
+
+                <h2>SANTIAGO</h2>
+
+                <span>
+                    ¡Gracias por ser parte de mis 2 añitos!
+                </span>
+
+                <div class="footer-line"></div>
+
+                <strong>
+                    ¡NOS VEMOS EN CHUCK E. CHEESE!
+                </strong>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ==========================================
+         CONFETI
+    ========================================== -->
+
+    <div
+        id="confettiContainer"
+        class="confetti-container"
+        aria-hidden="true"
+    ></div>
+
+</body>
+</html>
