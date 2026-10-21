@@ -850,3 +850,85 @@ if (document.readyState === "loading") {
     iniciarPagina();
 
 }
+
+/* ==========================================
+   MÚSICA DE FONDO - SANTIAGO JOSÉ
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const music = document.getElementById("backgroundMusic");
+    const button = document.getElementById("musicButton");
+
+    if (!music || !button) return;
+
+    music.volume = 0.45;
+
+    let musicStarted = false;
+
+    function updateButton() {
+        const playing = !music.paused;
+
+        button.classList.toggle("playing", playing);
+        button.textContent = playing ? "♫" : "♪";
+
+        button.setAttribute(
+            "aria-label",
+            playing ? "Pausar música" : "Reproducir música"
+        );
+    }
+
+    async function startMusic() {
+
+        if (musicStarted) return;
+
+        try {
+            await music.play();
+
+            musicStarted = true;
+            updateButton();
+
+        } catch (error) {
+            console.log("La música necesita interacción del usuario.");
+        }
+    }
+
+    // Intentar reproducir al abrir la invitación
+    startMusic();
+
+    // Iniciar con la primera interacción
+    document.addEventListener("pointerdown", (event) => {
+
+        if (button.contains(event.target)) return;
+
+        startMusic();
+
+    }, { once: true });
+
+    document.addEventListener("keydown", startMusic, { once: true });
+
+    // Botón para activar y pausar
+    button.addEventListener("click", async () => {
+
+        if (music.paused) {
+
+            try {
+                await music.play();
+                musicStarted = true;
+            } catch (error) {
+                console.log("No se pudo reproducir la música.");
+            }
+
+        } else {
+            music.pause();
+        }
+
+        updateButton();
+    });
+
+    music.addEventListener("play", updateButton);
+    music.addEventListener("pause", updateButton);
+
+    updateButton();
+
+});

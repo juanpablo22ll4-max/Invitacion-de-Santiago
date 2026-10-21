@@ -3964,3 +3964,120 @@ svg {
     }
 
 }
+
+/* ==========================================
+   MÚSICA DE FONDO - PAW PATROL
+========================================== */
+
+.music-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: 3px solid white;
+    border-radius: 50%;
+
+    background: #0878d8;
+    color: white;
+
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .25);
+
+    transition: transform .3s ease;
+}
+
+.music-button:hover {
+    transform: scale(1.1);
+}
+
+.music-button.playing {
+    background: #f1494b;
+    animation: musicPulse 2s infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(241, 73, 75, .4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 12px rgba(241, 73, 75, 0);
+    }
+}
+
+/* ==========================================
+   ANIMACIÓN CACHORROS PAW PATROL
+========================================== */
+
+.welcome-puppies {
+    animation: puppiesFloat 4s ease-in-out infinite;
+    transform-origin: center bottom;
+    will-change: transform;
+}
+
+@keyframes puppiesFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-7px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(1deg);
+    }
+
+}
+
+/* ==========================================
+   ANIMACIÓN NÚMERO 2
+========================================== */
+
+.level-image {
+    animation: levelBreathing 3.5s ease-in-out infinite;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+@keyframes levelBreathing {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+}
+
+/* ==========================================
+   ACCESIBILIDAD DE ANIMACIONES
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .welcome-puppies,
+    .level-image {
+        animation: none;
+    }
+
+}
